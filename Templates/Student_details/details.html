@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Report</title>
+  </head>
+  <body>
+    <h1>Please find details of student details</h1>
+    <div class="Report">
+        {% if insert_student_details %}
+        <table border="solid">
+            <thead>
+            <th>Student id</th>
+            <th>Student name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Email</th>
+            </thead>
+        {% for x in insert_student_details %}
+      <tr>
+        <td>{{x.Std_Id}}</td>
+        <td>{{x.Name}}</td>
+        <td>{{x.Age}}</td>
+        <td>{{x.Gender}}</td>
+        <td>{{x.Phone}}</td>
+        <td>{{x.Email}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+    {% else %}
+    <p>NO RECORD FOUND</p>
+    {% endif %}
+
+    </div>
+    <div class="List">
+      <h2>Student Details in the form of list</h2>
+      {% if insert_student_details %}
+      <ol>
+
+        {% for x in insert_student_details %}
+          <li>Student id:{{x.Std_Id}}</li>
+        <ul>
+          <li>Student name:{{x.Name}}</li>
+          <li>Age:{{x.Age}}</li>
+          <li>Gender:{{x.Gender}}</li>
+          <li>Phone:{{x.Phone}}</li>
+          <li>Email: {{x.Email}}</li>
+        </ul>
+          {% endfor %}
+      </ol>
+
+        {% endif %}
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration form</title>
+  </head>
+  <body>
+    <h1>Registration Page</h1>
+    <form class="" action="index.html" method="post">
+      Name: <input type="text" name="" value="">
+      <br>
+      Age: <input type="text" name="" value="">
+      <br>
+      Gender: <input type="text" name="" value="">
+      <br>
+      Email: <input type="text" name="" value="">
+      <br>
+      Phone: <input type="text" name="" value="">
+      <br>
+      <button type="button" name="button">Submit</button>
+    </form>
+   <form class="" action="index.html" method="post">
+      <h2>The below form is from django Forms</h2>
+      {{ form_d.as_p }}
+      {%csrf_token%}
+        <button type="button" name="button">Submit</button>
+
+    </form>
+
+  </body>
+</html>
